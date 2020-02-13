@@ -57,7 +57,11 @@ const menuButton = document.querySelector('.menu-button');
 
 menuButton.addEventListener('click', event => {
 menuN.classList.toggle('menu--open')
-
+gsap.to(menuN, {
+  duration: 1,
+  x: '100%',
+  ease: "elastic(1, 0.75)"
+ }).restart()
 });
 
 return menuN;
